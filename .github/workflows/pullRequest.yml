@@ -23,6 +23,12 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
 
+      - name: Install Bundler
+        run: gem install bundler
+
+      - name: Install gems
+        run: bundle install
+
       - name: Swift Packages Cache
         uses: actions/cache@v2
         id: cache
