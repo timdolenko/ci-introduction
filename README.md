@@ -12,10 +12,11 @@ Here's a quick diagram of how the process in the team might look like with this 
 
 <img width="1305" alt="Workflow process diagramm" src="https://user-images.githubusercontent.com/35912614/177534623-55d8ce27-5632-4ac8-a903-c09e78ece816.png">
 
-Clone this repo and checkout to `start` branch.
+Clone this repo and checkout to the `start` branch.
 
 It contains an empty SwiftUI app and 1 Unit Test.
 
+### Workflow initial setup
 Now, let's go to Visual Studio Code and create our first workflow yaml file:
 
 Create `.github/workflows/pullRequest.yml` file. I will just copy and paste the following to save time, but we'll go over everything:
@@ -61,3 +62,126 @@ jobs:
           key: ${{ runner.os }}-deps-v1-${{ hashFiles('BILDsolid.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
           restore-keys: ${{ runner.os }}-deps-v1-
 ```
+
+I won't go into detail, because each platform, in our case it's Github Actions, has it's own syntaxis, it's more important to understand the principles and overall those config files are usually very easy to understand.
+
+`on:`
+We describe _when_ we want to run the workflow, or _what_ will trigger it.
+In out case it's pull request against `develop` branch.
+`workflow_dispatch` means that we want to be able to trigger the workflow manually on Github. 
+
+`jobs`:
+Now we actually start to describe what we want to do. 
+We have the first and the only job called `test` (can be named anything else).
+`runs-on: macos-11` - Self-explanatory.
+
+`steps:` 
+Each job can have many of them.
+
+`actions/checkout@v2` - pull the repository code to the machine that was given us for this run. We start with a clean state.
+
+`cancel-workflow-action` - basically if we already running the same workflow from the same branch, we want to first cancel the old one, and only then start the new execution. We discard the result of the previous workflow.
+
+We can actually pass values or variables as a parameters to the step with `with:` keyword.
+
+`access_token: ${{ github.token }}`
+
+You see, `github.token` is actually a variable here. How do we now that it's available? - Documentation.
+
+`setup-xcode@v1` - install xcode
+
+`webfactory/ssh-agent@v0.4.1` - setup ssh
+
+`ruby/setup-ruby@v1` - install ruby - we will need it later
+
+`actions/cache@v2` - we want to cache SPM modules to not refetch them again and again.
+
+That's it. Now we can push and see how it works, but the most important part is missing - the unit tests.
+
+### Fastlane
+To run them we will use `fastlane`. Let's setup a simple fastlane project:
+
+First of all we need to install fastlane locally, for it let's create a `Gemfile` (no extension) in the root folder:
+
+```ruby
+source 'https://rubygems.org'
+
+gem 'fastlane'
+```
+
+Now please install ruby and Rubygems, there is a high chance that you already have them on your machine. 
+
+```
+gem install bundler
+```
+
+Now run `bundle install` - it will read the Gemfile and install or update fastlane.
+
+Okay let's create the first fastlane file:
+`Fastlane/Fastfile`
+```ruby
+fastlane_version '2.157'
+default_platform :ios
+
+platform :ios do
+    
+end
+```
+
+And now finally add unit tests lane:
+
+```ruby
+platform :ios do
+    desc 'Builds project and executes unit tests'
+    lane :unit_test do |options|
+      scan(
+        xcconfig: "./tools/unit_tests.xcconfig",
+        clean: options[:clean],
+        skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution]
+      )
+    end
+end
+```
+
+Now, obviously it's not all it takes to run the test. We want to specify the project and the scheme among other things. Let's create `Fastlane/Scanfile`:
+```ruby
+# For more information about this configuration visit
+# https://github.com/fastlane/scan#scanfile
+
+workspace "AnyApp.xcodeproj/project.xcworkspace"
+scheme "AnyApp"
+sdk "iphonesimulator"
+device "iPhone 11"
+code_coverage true
+xcargs '-parallelizeTargets'
+prelaunch_simulator true
+derived_data_path "Build/"
+```
+
+Most of it is self explanatory, everything else - just read docs if you wanna understand it.
+
+Okay, let's test how the `fastlane` works locally. In the terminal, from the root folder of the project, run:
+
+`fastlane unit_test`
+
+You'll see the simulator running our tests! How exciting! Now we just have to do the same on the CI - Super easy!
+
+Let's go back to our workflow file `pullRequest.yml` and finally add this at the end of the file:
+
+```yaml
+      - name: Run Tests
+        run: bundle exec fastlane unit_test
+```
+
+Now we actually make use of the cache and check if it's there, here's how:
+
+```yaml
+      - name: Run Tests (No Cache)
+        if: steps.setup.outputs.cache-hit != 'true'
+        run: bundle exec fastlane unit_test
+      
+      - name: Run Tests (Cache)
+        if: steps.setup.outputs.cache-hit == 'true'
+        run: bundle exec fastlane unit_test skip_package_dependencies_resolution:true
+```
+
