@@ -96,7 +96,7 @@ You see, `github.token` is actually a variable here. How do we now that it's ava
 
 `actions/cache@v2` - we want to cache SPM modules to not refetch them again and again.
 
-That's it. Now we can push and see how it works, but the most important part is missing - the unit tests.
+That's it. Now we can push and see how it works, but the most important part is missing - the unit tests. 
 
 ### Fastlane
 To run them we will use `fastlane`. Let's setup a simple fastlane project:
@@ -160,6 +160,16 @@ derived_data_path "Build/"
 
 Most of it is self explanatory, everything else - just read docs if you wanna understand it.
 
+Please create `.gitignore` to avoid comitting build artifacts and cache:
+
+```
+Build
+
+# fastlane
+Fastlane/report.xml
+Fastlane/test_output
+```
+
 Okay, let's test how the `fastlane` works locally. In the terminal, from the root folder of the project, run:
 
 `fastlane unit_test`
@@ -185,3 +195,4 @@ Now we actually make use of the cache and check if it's there, here's how:
         run: bundle exec fastlane unit_test skip_package_dependencies_resolution:true
 ```
 
+Now let's actually see if it works
