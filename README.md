@@ -90,7 +90,11 @@ You see, `github.token` is actually a variable here. How do we now that it's ava
 
 `setup-xcode@v1` - install xcode
 
-`ruby/setup-ruby@v1` - install ruby - we will need it later
+`ruby/setup-ruby@v1` - install ruby - we will need it later. 
+
+Please add `.ruby-version` file to the root with the following contents: `2.7.2`
+
+`gem install bundler` and `bundle install` are needed to install [Bundler](https://bundler.io/), that's needed to manage ruby dependencies (kind of like SPM) and install all the gems (kind of like packages) that include fastlane. We will define the `Gemfile` later. But esentially all this installs `fastlane`.
 
 `actions/cache@v2` - we want to cache SPM modules to not refetch them again and again.
 
@@ -201,4 +205,6 @@ If you'll raise a pull request from your branch
 
 <img width="831" alt="Screenshot 2022-07-06 at 14 54 58" src="https://user-images.githubusercontent.com/35912614/177554925-e5868d7d-3608-4cf7-a005-57dcbf4995f2.png">
 
+Warning: if you create a project from scratch on your own and the latest Xcode available on Github Actions is still 13.2.1, you have to make sure your iOS Deployment target in the project is set to `15.2` and not higher. 
 
+After a few minutes you'll see beautiful green mark!
