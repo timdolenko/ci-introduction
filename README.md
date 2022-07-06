@@ -90,17 +90,6 @@ You see, `github.token` is actually a variable here. How do we now that it's ava
 
 `setup-xcode@v1` - install xcode
 
-`webfactory/ssh-agent@v0.4.1` - setup ssh
-
-```
-with:
-  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-```
-
-Now for the SSH, we actually have to pass SSH key from the outside. How do we do that? Using Github Secrets! Go to your repository settings and then `Security/Secrets/Actions`
-
-Add a new repository secret with key `SSH_PRIVATE_KEY`. What should be the value? It should be a private SSH key of someone with access to your repository, let's say a new key for your personal account.
-
 `ruby/setup-ruby@v1` - install ruby - we will need it later
 
 `actions/cache@v2` - we want to cache SPM modules to not refetch them again and again.
