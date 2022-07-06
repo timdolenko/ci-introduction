@@ -48,7 +48,7 @@ jobs:
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ inputs.ssh-key }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - uses: ruby/setup-ruby@v1
 
@@ -91,6 +91,15 @@ You see, `github.token` is actually a variable here. How do we now that it's ava
 `setup-xcode@v1` - install xcode
 
 `webfactory/ssh-agent@v0.4.1` - setup ssh
+
+```
+with:
+  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+```
+
+Now for the SSH, we actually have to pass SSH key from the outside. How do we do that? Using Github Secrets! Go to your repository settings and then `Security/Secrets/Actions`
+
+Add a new repository secret with key `SSH_PRIVATE_KEY`. What should be the value? It should be a private SSH key of someone with access to your repository, let's say a new key for your personal account.
 
 `ruby/setup-ruby@v1` - install ruby - we will need it later
 
@@ -196,3 +205,11 @@ Now we actually make use of the cache and check if it's there, here's how:
 ```
 
 Now let's actually see if it works
+
+Push the code! 
+
+If you'll raise a pull request from your branch
+
+<img width="831" alt="Screenshot 2022-07-06 at 14 54 58" src="https://user-images.githubusercontent.com/35912614/177554925-e5868d7d-3608-4cf7-a005-57dcbf4995f2.png">
+
+
