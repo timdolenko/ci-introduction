@@ -1,4 +1,4 @@
-# ci-introduction
+# How to do CI/CD for iOS?
 
 This tutorial will teach you how to setup your own CI/CD based on the setup we currently have in Axel Springer in BILD team. BILD is a production app that currently has around 2M MAU.
 
@@ -45,12 +45,13 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
       - uses: ruby/setup-ruby@v1
+
+      - name: Install Bundler
+        run: gem install bundler
+
+      - name: Install gems
+        run: bundle install
 
       - name: Swift Packages Cache
         uses: actions/cache@v2
