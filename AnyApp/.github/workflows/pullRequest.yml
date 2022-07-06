@@ -21,11 +21,6 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
       - uses: ruby/setup-ruby@v1
 
       - name: Swift Packages Cache
