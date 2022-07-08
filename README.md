@@ -138,7 +138,6 @@ platform :ios do
     desc 'Builds project and executes unit tests'
     lane :unit_test do |options|
       scan(
-        xcconfig: "./tools/unit_tests.xcconfig",
         clean: options[:clean],
         skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution]
       )
