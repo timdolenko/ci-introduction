@@ -207,4 +207,6 @@ If you'll raise a pull request from your branch
 
 Warning: if you create a project from scratch on your own and the latest Xcode available on Github Actions is still 13.2.1, you have to make sure your iOS Deployment target in the project is set to `15.2` and not higher. 
 
-After a few minutes you'll see beautiful green mark!
+After a few minutes you'll see beautiful green mark! 
+
+#### Congrats! 🥳
