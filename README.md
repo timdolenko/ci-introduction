@@ -64,7 +64,7 @@ jobs:
           restore-keys: ${{ runner.os }}-deps-v1-
 ```
 
-I won't go into detail, because each platform, in our case it's Github Actions, has it's own syntaxis, it's more important to understand the principles and overall those config files are usually very easy to understand.
+I won't go into detail, because each platform, in our case it's Github Actions, has it's own syntax, it's more important to understand the principles and overall those config files are usually very easy to understand.
 
 `on:`
 We describe _when_ we want to run the workflow, or _what_ will trigger it.
@@ -95,7 +95,7 @@ You see, `github.token` is actually a variable here. How do we now that it's ava
 
 Please add `.ruby-version` file to the root with the following contents: `2.7.2`
 
-`gem install bundler` and `bundle install` are needed to install [Bundler](https://bundler.io/), that's needed to manage ruby dependencies (kind of like SPM) and install all the gems (kind of like packages) that include fastlane. We will define the `Gemfile` later. But esentially all this installs `fastlane`.
+`gem install bundler` and `bundle install` are needed to install [Bundler](https://bundler.io/), that's needed to manage ruby dependencies (kind of like SPM) and install all the gems (kind of like packages) that include fastlane. We will define the `Gemfile` later. But essentially all this installs `fastlane`.
 
 `actions/cache@v2` - we want to cache SPM modules to not refetch them again and again.
 
@@ -162,7 +162,7 @@ derived_data_path "Build/"
 
 Most of it is self explanatory, everything else - just read docs if you wanna understand it.
 
-Please create `.gitignore` to avoid comitting build artifacts and cache:
+Please create `.gitignore` to avoid committing build artefacts and cache:
 
 ```
 Build
