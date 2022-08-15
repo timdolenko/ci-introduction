@@ -2,6 +2,9 @@
 
 This tutorial will teach you how to setup your own CI/CD based on the setup we currently have in Axel Springer in BILD team. BILD is a production app that currently has around 2M MAU.
 
+<a href="https://www.youtube.com/watch?v=yNqCpMLmJqE"><img width="356" alt="Screenshot 2022-08-15 at 15 53 32" src="https://user-images.githubusercontent.com/35912614/184648589-df5ebe27-b82e-4979-b541-7b74544221e7.png"></a>
+
+
 ### Our Goal
 We want to:
 1. automatically run Unit Tests for each pull request
