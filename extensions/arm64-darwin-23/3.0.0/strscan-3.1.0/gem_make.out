@@ -1,0 +1,17 @@
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/strscan-3.1.0/ext/strscan
+/Users/shivprakash/.rbenv/versions/3.0.1/bin/ruby -I /Users/shivprakash/.rbenv/versions/3.0.1/lib/ruby/3.0.0 -r ./siteconf20240716-43170-ad8x04.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+checking for rb_reg_onig_match() in ruby.h... no
+creating Makefile
+
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= clean
+
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\=
+compiling strscan.c
+linking shared-object strscan.bundle
+
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 strscan.bundle ./.gem.20240716-43170-89f4o1

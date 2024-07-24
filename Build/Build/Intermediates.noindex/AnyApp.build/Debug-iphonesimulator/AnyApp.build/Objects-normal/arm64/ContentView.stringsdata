@@ -1,0 +1,12 @@
+{
+  "source": "/Users/shivprakash/Documents/ci-introduction/AnyApp/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Hello, world!"
+      }
+    ]
+  },
+  "version": 1
+}

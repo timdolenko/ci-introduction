@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'AnyAppUITests' in project 'AnyApp'
+➜ Explicit dependency on target 'AnyApp' in project 'AnyApp'
+Target 'AnyAppTests' in project 'AnyApp'
+➜ Explicit dependency on target 'AnyApp' in project 'AnyApp'
+Target 'AnyApp' in project 'AnyApp' (no dependencies)

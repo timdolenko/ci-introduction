@@ -1,0 +1,38 @@
+{
+  "" : {
+    "diagnostics" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyApp-master.dia",
+    "emit-module-dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyApp-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyApp-master-emit-module.dia",
+    "swift-dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyApp-master.swiftdeps"
+  },
+  "/Users/shivprakash/Documents/ci-introduction/AnyApp/AnyAppApp.swift" : {
+    "const-values" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp.swiftconstvalues",
+    "dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp.d",
+    "diagnostics" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp.dia",
+    "index-unit-output-path" : "/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp.o",
+    "llvm-bc" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp.bc",
+    "object" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp.o",
+    "swift-dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp.swiftdeps",
+    "swiftmodule" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/AnyAppApp~partial.swiftmodule"
+  },
+  "/Users/shivprakash/Documents/ci-introduction/AnyApp/ContentView.swift" : {
+    "const-values" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/shivprakash/Documents/ci-introduction/Build/Build/Intermediates.noindex/AnyApp.build/Debug-iphonesimulator/AnyApp.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

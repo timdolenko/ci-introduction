@@ -1,0 +1,15 @@
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/nkf-0.2.0/ext/nkf
+/Users/shivprakash/.rbenv/versions/3.0.1/bin/ruby -I /Users/shivprakash/.rbenv/versions/3.0.1/lib/ruby/3.0.0 -r ./siteconf20240716-43170-2eerei.rb extconf.rb
+creating Makefile
+
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= clean
+
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\=
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/shivprakash/Documents/ci-introduction/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20240716-43170-m2obep

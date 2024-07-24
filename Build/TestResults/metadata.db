@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FormatVersion</key>
+	<integer>1</integer>
+	<key>Store</key>
+	<dict>
+		<key>AnyAppTests</key>
+		<dict>
+			<key>AnyAppTests</key>
+			<dict>
+				<key>testAdd</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.00076901912689208984</real>
+				</dict>
+				<key>testExample</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.00024807453155517578</real>
+				</dict>
+				<key>testMult</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.00022399425506591797</real>
+				</dict>
+				<key>testPerformanceExample</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.31739699840545654</real>
+				</dict>
+				<key>testSub</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.00026404857635498047</real>
+				</dict>
+			</dict>
+		</dict>
+		<key>AnyAppUITests</key>
+		<dict>
+			<key>AnyAppUITests</key>
+			<dict>
+				<key>testExample</key>
+				<dict>
+					<key>mrnet</key>
+					<real>1.7859359979629517</real>
+				</dict>
+				<key>testLaunchPerformance</key>
+				<dict>
+					<key>mrnet</key>
+					<real>15.572643995285034</real>
+				</dict>
+			</dict>
+			<key>AnyAppUITestsLaunchTests</key>
+			<dict>
+				<key>testLaunch</key>
+				<dict>
+					<key>mrnet</key>
+					<real>3.1499130725860596</real>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
