@@ -1,0 +1,14 @@
+# Scanfile
+
+# For more information about this configuration visit:
+# https://github.com/fastlane/scan#scanfile
+
+
+project "AnyApp.xcodeproj"
+scheme "AnyApp"
+sdk "iphonesimulator"
+device "iPhone 15 Pro"  
+code_coverage true
+xcargs "-parallelizeTargets"
+prelaunch_simulator true
+derived_data_path "./Build"
