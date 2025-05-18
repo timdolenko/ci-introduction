@@ -7,7 +7,9 @@ platform :ios do
     lane :unit_test do |options|
       scan(
         clean: options[:clean],
-        skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution]
+        skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution],
+        scheme: "YourAppScheme",
+        xcodebuild_formatter: "xcpretty"
       )
     end
 
