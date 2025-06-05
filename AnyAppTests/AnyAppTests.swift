@@ -13,4 +13,8 @@ class AnyAppTests: XCTestCase {
     func testExample() throws {
         XCTAssertEqual(2*2, 4)
     }
+    
+    func testFailed() throws {
+        XCTAssertEqual(2*2, 5)
+    }
 }
